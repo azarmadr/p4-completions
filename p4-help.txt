@@ -1,0 +1,29 @@
+
+    Perforce -- the Fast Software Configuration Management System.
+
+    p4 is Perforce's client tool for the command line.  Try:
+
+        p4 help simple          list most common commands
+        p4 help commands        list all standard commands
+        p4 help command         help on a specific command
+
+        p4 help administration  help on specialized administration topics
+        p4 help charset         help on character set translation
+        p4 help configurables   list server configuration variables
+        p4 help environment     list environment and registry variables
+        p4 help filetypes       list supported file types
+        p4 help jobview         help on jobview syntax
+        p4 help networkaddress  help on network address syntax
+        p4 help revisions       help on specifying file revisions
+        p4 help streamintro     introduction to streams
+        p4 help usage           generic command line arguments
+        p4 help views           help on view syntax
+        p4 help replication     help on specialized replication topics
+        p4 help dvcs            help on decentralized Perforce configurations
+
+        p4 help legal           legal and license information
+
+    The full user manual is available at
+    https://www.perforce.com/support/self-service-resources/documentation
+
+    Server 2018.2/1779952.
