@@ -1,105 +1,118 @@
-set -l p4_client_commands stream key repo repos user undo update integrated switch login2 dirs describe operating ignores job cstat integrate workspace label tickets annotate review interchanges prune resolve See filelog reshelve changelists depot opened reconcile where labelsync diff2 fstat changelist protects lock fix shelve group unshelve sync print branches change list files copy logger rename istat groups have attribute sizes merge counters status workflows grep client move users topics aliases edit populate workspaces info set submit reviews delete branch streams protect passwd rec changes unlock clients revert flush labels jobs login diff keys reopen tag fixes counter help resolved clean commands add trust logout depots
+set -l p4_client_commands delete workspaces reopen integrated client logout reviews fix status annotate keys clients trust streams describe grep counters fixes diff passwd ignores dirs labelsync flush resolved change files add prune depots counter revert populate clean user have users sizes changelists tickets aliases label interchanges copy print workspace lock fstat diff2 protect integrate unlock reconcile rec group job sync stream tag labels istat reshelve cstat depot rename branch unshelve repos switch changes undo groups key submit shelve move logger login2 login where update repo review attribute changelist list resolve info edit branches jobs filelog merge set protects opened
 
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a $p4_client_commands
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a stream -d 'Create or edit a stream specification'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a key -d 'Display, set, or delete a key/value pair'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a repo -d 'Create, edit or delete a repo specification'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a repos -d 'Display a list of repos (depots of type graph)'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a user -d 'Create or edit a user specification'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a undo -d 'Undo a range of revisions'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a update -d 'Update the client with its view of the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a integrated -d 'Show integrations that have been submitted'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a switch -d 'Switch to a different stream, or create a new stream.'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a login2 -d 'Perform a multi factor authentication'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a dirs -d 'List subdirectories of a given depot directory'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a describe -d 'Display a changelist description'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a operating -d 'the server.'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a ignores -d 'List P4IGNORE mappings'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a job -d 'Create or edit a job (defect) specification'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a cstat -d 'Dump change/sync status for current client'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a integrate -d 'Schedule integration from one file to another'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a workspace -d 'Create or edit a client specification and its view'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a label -d 'Create or edit a label specification and its view'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a tickets -d 'Display list of session tickets for this user'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a annotate -d 'Print file lines along with their revisions'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a review -d 'List and track changelists (for the review daemon)'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a interchanges -d 'Report changes that have not yet been integrated'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a prune -d 'Remove unmodified branched files from a stream'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a resolve -d 'Merge open files with other revisions or files'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a See -d ''p4 help dvcs' for more information about additional commands and'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a filelog -d 'List revision history of files'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a reshelve -d 'Copy shelved files to a new or existing shelf'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a changelists -d 'Display list of pending and submitted changelists'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a depot -d 'Create or edit a depot specification'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a opened -d 'Display list of files opened for pending changelist'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a reconcile -d 'Reconcile client to offline workspace changes'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a where -d 'Show how file names map through the client view'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a labelsync -d 'Synchronize label with the current client contents'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a diff2 -d 'Display diff of two depot files'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a fstat -d 'Dump file info'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a changelist -d 'Create or edit a changelist description'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a protects -d 'Display protections in place for a given user/path'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a lock -d 'Lock an opened file against changelist submission'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a fix -d 'Mark jobs as being fixed by named changelists'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a shelve -d 'Store files from a pending changelist into the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a group -d 'Change members of a user group'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a unshelve -d 'Restore shelved files from a pending changelist'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a sync -d 'Synchronize the client with its view of the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a print -d 'Retrieve a depot file to the standard output'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a branches -d 'Display list of branches'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a change -d 'Create or edit a changelist description'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a list -d 'Create an in-memory (label) list of depot files'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a files -d 'List files in the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a copy -d 'Schedule copy of latest rev from one file to another'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a logger -d 'Report what jobs and changelists have changed'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a rename -d 'Moves files from one location to another'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a istat -d 'Show integrations needed for a stream'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a groups -d 'List groups (of users)'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a have -d 'List revisions last synced'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a attribute -d 'Set per-revision attributes on revisions'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a sizes -d 'Display size information for files in the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a merge -d 'Schedule merge (integration) from one file to another'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a counters -d 'Display list of known counters'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a status -d 'Preview reconcile of client to offline workspace changes'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a workflows -d '.'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a grep -d 'Print lines from text files matching a pattern'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a client -d 'Create or edit a client specification and its view'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a move -d 'Moves files from one location to another'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a users -d 'Display list of known users'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a topics -d 'of interest to those who use using Perforce with decentralized'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a aliases -d 'Display the content of the P4ALIASES file'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a edit -d 'Open an existing file for edit'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a populate -d 'Populate a branch or stream with files'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a workspaces -d 'Display list of known clients'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a info -d 'Print out client/server information'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a set -d 'Set variables in the registry (Windows only)'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a submit -d 'Submit open files to the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a reviews -d 'Show what users are subscribed to review files'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a delete -d 'Open an existing file to delete it from the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a branch -d 'Create or edit a branch specification'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a streams -d 'Display list of streams'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a protect -d 'Modify protections in the server namespace'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a passwd -d 'Set the user's password on the server (and Windows client)'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a rec -d 'Reconcile client to offline workspace changes'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a changes -d 'Display list of pending and submitted changelists'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a unlock -d 'Release a locked file but leave it open'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a clients -d 'Display list of known clients'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a revert -d 'Discard changes from an opened file'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a flush -d 'Fake a 'p4 sync' by not moving files'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a labels -d 'Display list of labels'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a jobs -d 'Display list of jobs'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a login -d 'Login to Perforce by obtaining a session ticket'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a diff -d 'Display diff of client file with depot file'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a keys -d 'Display list of known keys and their values'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a reopen -d 'Change the type or changelist number of an opened file'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a tag -d 'Tag files with a label'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a fixes -d 'List what changelists fix what job'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a counter -d 'Display, set, or delete a counter'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a help -d 'Print the requested help message'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a resolved -d 'Show files that have been merged but not submitted'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a clean -d 'Delete or refresh local files to match depot state'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a commands -d 'and issues of interest to those who are administering and'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a add -d 'Open a new file to add it to the depot'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a trust -d 'Establish trust of an SSL connection'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a logout -d 'Logout of Perforce by removing or invalidating a ticket'
-complete -f -c p4 -n "not __fish_seen_subcommand_from $p4_client_commands" -a depots -d 'Display list of depots'
+complete -f -c p4 -n "not __fish_seen_subcommand_from help" -a help -d "Print the requested help message"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a delete -d "Open an existing file to delete it from the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a workspaces -d "Display list of known clients"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a reopen -d "Change the type or changelist number of an opened file"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a integrated -d "Show integrations that have been submitted"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a client -d "Create or edit a client specification and its view"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a logout -d "Logout of Perforce by removing or invalidating a ticket"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a reviews -d "Show what users are subscribed to review files"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a fix -d "Mark jobs as being fixed by named changelists"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a status -d "Preview reconcile of client to offline workspace changes"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a annotate -d "Print file lines along with their revisions"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a keys -d "Display list of known keys and their values"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a clients -d "Display list of known clients"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a trust -d "Establish trust of an SSL connection"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a streams -d "Display list of streams"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a describe -d "Display a changelist description"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a grep -d "Print lines from text files matching a pattern"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a counters -d "Display list of known counters"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a fixes -d "List what changelists fix what job"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a diff -d "Display diff of client file with depot file"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a passwd -d "Set the user's password on the server (and Windows client)"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a ignores -d "List P4IGNORE mappings"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a dirs -d "List subdirectories of a given depot directory"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a labelsync -d "Synchronize label with the current client contents"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a flush -d "Fake a 'p4 sync' by not moving files"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a resolved -d "Show files that have been merged but not submitted"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a change -d "Create or edit a changelist description"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a files -d "List files in the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a add -d "Open a new file to add it to the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a prune -d "Remove unmodified branched files from a stream"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a depots -d "Display list of depots"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a counter -d "Display, set, or delete a counter"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a revert -d "Discard changes from an opened file"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a populate -d "Populate a branch or stream with files"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a clean -d "Delete or refresh local files to match depot state"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a user -d "Create or edit a user specification"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a have -d "List revisions last synced"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a users -d "Display list of known users"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a sizes -d "Display size information for files in the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a changelists -d "Display list of pending and submitted changelists"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a tickets -d "Display list of session tickets for this user"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a aliases -d "Display the content of the P4ALIASES file"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a label -d "Create or edit a label specification and its view"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a interchanges -d "Report changes that have not yet been integrated"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a copy -d "Schedule copy of latest rev from one file to another"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a print -d "Retrieve a depot file to the standard output"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a workspace -d "Create or edit a client specification and its view"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a lock -d "Lock an opened file against changelist submission"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a fstat -d "Dump file info"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a diff2 -d "Display diff of two depot files"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a protect -d "Modify protections in the server namespace"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a integrate -d "Schedule integration from one file to another"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a unlock -d "Release a locked file but leave it open"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a reconcile -d "Reconcile client to offline workspace changes"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a rec -d "Reconcile client to offline workspace changes"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a group -d "Change members of a user group"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a job -d "Create or edit a job (defect) specification"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a sync -d "Synchronize the client with its view of the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a stream -d "Create or edit a stream specification"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a tag -d "Tag files with a label"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a labels -d "Display list of labels"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a istat -d "Show integrations needed for a stream"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a reshelve -d "Copy shelved files to a new or existing shelf"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a cstat -d "Dump change/sync status for current client"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a depot -d "Create or edit a depot specification"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a rename -d "Moves files from one location to another"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a branch -d "Create or edit a branch specification"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a unshelve -d "Restore shelved files from a pending changelist"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a repos -d "Display a list of repos (depots of type graph)"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a switch -d "Switch to a different stream, or create a new stream."
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a changes -d "Display list of pending and submitted changelists"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a undo -d "Undo a range of revisions"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a groups -d "List groups (of users)"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a key -d "Display, set, or delete a key/value pair"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a submit -d "Submit open files to the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a shelve -d "Store files from a pending changelist into the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a move -d "Moves files from one location to another"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a logger -d "Report what jobs and changelists have changed"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a login2 -d "Perform a multi factor authentication"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a login -d "Login to Perforce by obtaining a session ticket"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a where -d "Show how file names map through the client view"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a update -d "Update the client with its view of the depot"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a repo -d "Create, edit or delete a repo specification"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a review -d "List and track changelists (for the review daemon)"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a attribute -d "Set per-revision attributes on revisions"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a changelist -d "Create or edit a changelist description"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a list -d "Create an in-memory (label) list of depot files"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a resolve -d "Merge open files with other revisions or files"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a info -d "Print out client/server information"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a edit -d "Open an existing file for edit"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a branches -d "Display list of branches"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a jobs -d "Display list of jobs"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a filelog -d "List revision history of files"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a merge -d "Schedule merge (integration) from one file to another"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a set -d "Set variables in the registry (Windows only)"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a protects -d "Display protections in place for a given user/path"
+complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a opened -d "Display list of files opened for pending changelist"
+set -l p4c_help legal administration views charset replication dvcs simple jobview streamintro revisions command environment commands networkaddress filetypes usage configurables
+
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a legal -d 'legal and license information'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a administration -d 'help on specialized administration topics'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a views -d 'help on view syntax'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a charset -d 'help on character set translation'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a replication -d 'help on specialized replication topics'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a dvcs -d 'help on decentralized Perforce configurations'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a simple -d 'list most common commands'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a jobview -d 'help on jobview syntax'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a streamintro -d 'introduction to streams'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a revisions -d 'help on specifying file revisions'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a command -d 'help on a specific command'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a environment -d 'list environment and registry variables'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a commands -d 'list all standard commands'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a networkaddress -d 'help on network address syntax'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a filetypes -d 'list supported file types'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a usage -d 'generic command line arguments'
+complete -f -c p4 -n "__fish_seen_subcommand_from help; and not __fish_contains_opt $p4c_help" -a configurables -d 'list server configuration variables'
