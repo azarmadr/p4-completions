@@ -23,8 +23,12 @@ class P4-actions {
 # Parsing and creating fish completion's
 
 my $p4fc = open 'p4-completion.fish', :w;
+<<<<<<< HEAD
 with Cmd-Des.parsefile('p4-help-cmds.txt').made {
   # `p4 help commands`
+=======
+with Cmd-Des.parsefile('p4-help-cmds.txt', actions => P4-actions.new).made {
+>>>>>>> a6d157c2e7836900ee5d77d301a8e3eae19dc34f
   .keys.sort.say;
   $p4fc.say: $('set -l p4_client_commands ' ~ .keys.join(' ') ~ "\n").subst(' help','');
   $p4fc.say: 'complete -f -c p4 -n "not __fish_seen_subcommand_from help" -a help -d "Print the requested help message"';
@@ -32,8 +36,12 @@ with Cmd-Des.parsefile('p4-help-cmds.txt').made {
     $p4fc.say: 'complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a ' ~ "$c -d \"$d\"" unless $c eq 'help';
   }
 }
+<<<<<<< HEAD
 with Cmd-Des.parsefile('p4-help.txt').made {
   # `p4 help`
+=======
+with Cmd-Des.parsefile('p4-help.txt', actions => P4-actions.new).made {
+>>>>>>> a6d157c2e7836900ee5d77d301a8e3eae19dc34f
   #.keys.elems.say;
   $p4fc.say: 'set -l p4c_help ' ~ .keys.join(' ') ~ "\n";
   for .kv -> $c, $d {
