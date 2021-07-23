@@ -1,0 +1,754 @@
+--ignore-changeview: Ignore the limits imposed by the changview.
+--diff-list-flag (-s): lists files that satisfy the flag value.
+--output-flags (-O): specifies codes controlling the command output.
+--binary-as-text (-t): specifies that binary files are to be processed.
+--max (-m): specifies the maximum number of objects.
+--force (-f): overrides the normal safety checks.
+--diff-flags (-d): specifies flags for diff behavior.
+Usage: diff [ -d<flags> -f -m max -Od -s<flag> -t ] [files...]
+--exists: Only output spec if it exists.
+--force-delete: delete entity from protects and groups.
+--administrator (-A): enables an administrator to create a new group.
+--owner (-a): enables an owner of the group to update it.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: group [ -a -A -F -d -i -o ] groupname
+--ignore-changeview: Ignore the limits imposed by the changview.
+--show-files: specifies to display the individual files.
+--me: Shorthand for -u $P4USER
+--user (-u): specifies the user name.
+--status (-s): specifies the change status.
+--max (-m): specifies the maximum number of objects.
+--force (-f): overrides the normal safety checks.
+--brief (-L): displays truncated changelist description.
+--long (-l): displays a complete version of the results.
+--show-time (-t): includes the time in the output.
+--inherited (-i): includes changes integrated into the files.
+--client (-c): specifies the client workspace name.
+Usage: changes [-i -t -l -L -f -r -c client -e changelist# -m count -s status -u user] [files...]
+--local (-l): specifies local syntax for filenames.
+--depot-type (-t): specifies the type of depot
+Usage: help [ -l -t ] [command ...]
+--exists: Only output spec if it exists.
+--template (-t): specifies the template for a client or label.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--global (-g): enables modifying a global label from an Edge Server.
+--force (-f): overrides the normal safety checks.
+--delete (-d): specifies that the object should be deleted.
+Usage: label [ -d -f -g -i -o -t template ] labelname
+--me: Shorthand for -u $P4USER
+--show-time (-t): includes the time in the output.
+--no-case-expression (-E): specifies the case-insensitive expression to filter the results.
+--expression (-e): specifies the expression to filter the results.
+--user (-u): specifies the user name.
+--max (-m): specifies the maximum number of objects.
+Usage: branches [ -t ] [ -u user ] [ [-e|-E] query ] [ -m max ]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--show-files: specifies to display the individual files.
+--me: Shorthand for -u $P4USER
+--user (-u): specifies the user name.
+--status (-s): specifies the change status.
+--max (-m): specifies the maximum number of objects.
+--force (-f): overrides the normal safety checks.
+--brief (-L): displays truncated changelist description.
+--long (-l): displays a complete version of the results.
+--show-time (-t): includes the time in the output.
+--inherited (-i): includes changes integrated into the files.
+--client (-c): specifies the client workspace name.
+Usage: changes [-i -t -l -L -f -r -c client -e changelist# -m count -s status -u user] [files...]
+Perforce client error:
+	p4 -h for usage.
+--global (-M): create this list on the master server.
+--label (-l): specifies the name of the label.
+--client (-C): limit the results to this client workspace.
+--delete (-d): specifies that the object should be deleted.
+Usage: list [-l label [-d]] [-C] [-M] files...
+--max (-m): specifies the maximum number of objects.
+--inherited (-i): includes changes integrated into the files.
+--verbose (-v): includes additional information in the output.
+--owner (-o): indicates that the argument is an owner.
+--user (-u): indicates that the argument is a user name.
+--group (-g): indicates that the argument is a group name.
+Usage: groups [ -m max ] [ [ [ -i [ -v ] ] user | group ] | [ -v [ group ] ]  | [ -g | -u | -o name ] ]
+--exists: Only output spec if it exists.
+--virtual (-v): specifies this is a virtual stream.
+--type (-t): specifies the type of stream
+--parent (-P): specifies the stream to be used as the parent.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--force (-f): overrides the normal safety checks.
+--delete (-d): specifies that the object should be deleted.
+Usage: stream [ -d -i -o -P parent -t type -v ] [ -f ] [ streamname ]
+--unload (-U): enables access to unloaded objects.
+--max (-m): specifies the maximum number of objects.
+--tags (-T): specify which tags to include in the results.
+--filter (-F): specify filters which limit the results.
+Usage: streams [ -U -F filter -T fields -m max ] [ streamPath... ]
+--yes (-y): causes prompts to be automatically accepted.
+--exists: Only output spec if it exists.
+--force-delete: delete entity from protects and groups.
+--force (-f): overrides the normal safety checks.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: user [ -f -F -d -i -o ] [ username ]
+Usage: istat [ -a -c -C -r -s ] stream
+--exists: Only output spec if it exists.
+--type (-T): specifies the type of client (writeable/readonly/graph).
+--serverid (-P): specifies to use filtering specifications of this server.
+--temporary (-x): specifies to create a temporary client.
+--template (-t): specifies the template for a client or label.
+--stream (-S): specifies the stream to be used.
+--switch (-s): specifies to switch this client to a different stream.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--force-flag (-F): optional force behavior when deleting clients.
+--force (-f): overrides the normal safety checks.
+--delete (-d): specifies that the object should be deleted.
+--change (-c): specifies the changelist to use for the command.
+Usage: client [ -d -f -Fs -i -o -s ] [ -T type ] [ -t template | -S stream ] [ -c change ] [ clientname ]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--show-time (-t): includes the time in the output.
+--omit-moved (-1): disables following renames resulting from 'p4 move'.
+--omit-promoted (-p): disables following content of promoted task streams.
+--max (-m): specifies the maximum number of objects.
+--short (-s): displays a brief version of the results.
+--brief (-L): displays truncated changelist description.
+--long (-l): displays a complete version of the results.
+--content (-h): display file content history instead of file name history.
+--inherited (-i): includes changes integrated into the files.
+--change (-c): specifies the changelist to use for the command.
+Usage: filelog [ -c changelist# -h -i -l -L -t -m maxRevs -p -s ] files...
+--ignore-have: specifies that the publish option (-p) ignore any have records.
+--estimates (-N): specifies to display estimates about the work required.
+--parallel=threads=N,batch=N,batchsize=N,min=N,minsize=N: specify file transfer parallelism.
+--use-list (-L): collects multiple file arguments into an in-memory list.
+--safe (-s): performs a safety check before sending the file.
+--publish (-p): populates the client workspace but does not update the server.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--quiet (-q): suppresses normal information output.
+--max (-m): specifies the maximum number of objects.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+Usage: sync [ -f -k -n -N -p -q -r -s ] [-m max] [files...]
+--short (-s): displays a brief version of the results.
+Usage: info [-s]
+--exists: Only output spec if it exists.
+--full-branch (-F): include the full generated branch spec in the output.
+--parent (-P): specifies the stream to be used as the parent.
+--stream (-S): specifies the stream to be used.
+--force (-f): overrides the normal safety checks.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: branch [ -d -f -i -S stream -P parent -o ] branchname
+--serverid (-P): specifies to use filtering specifications of this server.
+--new-user (-U): specifies the new user of an empty pending change.
+--original (-O): specifies the original change number of a renumbered change.
+--update (-u): allows the owner of a submitted change to update it.
+--type (-t): specify the type of this change (public or restricted).
+--status (-s): specifies the change status.
+--force (-f): overrides the normal safety checks.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: change [ -d -i -o -s -t<type> -U<user>] [ -f | -u ] [ [ -O | -I ] changelist# ]
+--remote-user=name: specifies the name of the remote user to connect as. This option, if specificed, overrides the RemoteUser: field, if present, in the remote spec.
+--print (-p): specifies that the result is to be displayed.
+--status (-s): displays the current status.
+--host (-h): specifies the host name to use.
+--all (-a): specifies that the command should include all objects.
+Usage: login [ -s | -p ] [ -a | -h host ] [ -r remotespec ] [ username ]
+--virtual (-v): performs the action on the server without updating client data.
+--remote: Specifies the remote spec to be used.
+--filetype (-t): specifies the filetype to be used.
+--file-charset (-Q): specifies a character set override for this file.
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--no-ignore (-I): specifies that the command should ignore the P4IGNORE settings.
+--force (-f): overrides the normal safety checks.
+--downgrade (-d): indicates that the operation should be downgraded.
+--change (-c): specifies the changelist to use for the command.
+Usage: add/edit/delete [-c changelist#] [ -d -f -I -k -n -v ] [-t type] [--remote=rmt] files...
+--exists: Only output spec if it exists.
+--force (-f): overrides the normal safety checks.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: job [ -d -f -i -o ] [ jobName ]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--ignore-case (-i): causes the pattern-matching to be case-insensitive.
+--unload (-U): enables access to unloaded objects.
+--quiet (-q): suppresses normal information output.
+--max (-m): specifies the maximum number of objects.
+--file (-o): specifies the name of the output file.
+--leave-keywords (-k): specifies that RCS keywords are not to be expanded in the output.
+--archive (-A): enables access to the archive depot
+--all (-a): specifies that the command should include all objects.
+Usage: print [-a -A -k -o localFile -q -m max] [-U] files...
+Usage: cstat [files...]
+--drop-index: drop repo index.
+--create-index: create repo index for direct file history access.
+--exists: Only output spec if it exists.
+--force (-f): overrides the normal safety checks.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: repo [ -i -o -d -f ] [ repo ]
+--user (-u): specifies the user name.
+--show-files (-f): specifies to display the individual files.
+--source-file (-s): treat fromFile as the source and both sides of the branch view as the target.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--reverse (-r): specifies to reverse the direction of the branch view.
+--long (-l): displays a complete version of the results.
+--show-time (-t): includes the time in the output.
+--bypass-flow (-F): forces the command to process against a stream's expected flow.
+--parent (-P): specifies the stream to be used as the parent.
+--stream (-S): specifies the stream to be used.
+--branch (-b): specifies the branch name to use.
+Usage: interchanges -f -l -t -r -u user -F [ -b branch to... | -S stream [ -P parent ] [ files... ] | from to ]
+--remote: Specifies the remote spec to be used.
+--erase (-w): removes the object from the client machine.
+--client (-C): specifies the client workspace name.
+--change (-c): specifies the changelist to use for the command.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--unchanged (-a): specifies that only unchanged files are affected.
+Usage: revert [ -a -n -k -w -c changelist# -C client ] [--remote=rmt] files...
+--ignore-have: specifies that the publish option (-p) ignore any have records.
+--estimates (-N): specifies to display estimates about the work required.
+--parallel=threads=N,batch=N,batchsize=N,min=N,minsize=N: specify file transfer parallelism.
+--use-list (-L): collects multiple file arguments into an in-memory list.
+--safe (-s): performs a safety check before sending the file.
+--publish (-p): populates the client workspace but does not update the server.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--quiet (-q): suppresses normal information output.
+--max (-m): specifies the maximum number of objects.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+Usage: sync [ -f -k -n -N -p -q -r -s ] [-m max] [files...]
+--filetype (-t): specifies the filetype to be used.
+--rename (-r): rename existing files without changing content.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+--change (-c): specifies the changelist to use for the command.
+Usage: move [-c changelist#] [ -f ] [ -k ] [-t type] [ -r ] from to
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--keep-have (-h): specifies to leave target files at the currently synced revision.
+--output-flags (-O): specifies codes controlling the command output.
+--parent (-P): specifies the stream to be used as the parent.
+--stream (-S): specifies the stream to be used.
+--integ-flags (-R): specifies how integrate should schedule resolves.
+--delete-flags (-D): specifies how integration should handle deleted files.
+--force (-f): overrides the normal safety checks.
+--source-file (-s): treat fromFile as the source and both sides of the branch view as the target.
+--quiet (-q): suppresses normal information output.
+--virtual (-v): performs the action on the server without updating client data.
+--max (-m): specifies the maximum number of objects.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--change (-c): specifies the changelist to use for the command.
+--reverse (-r): specifies to reverse the direction of the branch view.
+--branch (-b): specifies the branch name to use.
+Usage: integrate [ -c changelist# -D<flags> -f -h -m max -n -Obr -q -r -s from -v ] [ -b branch to... | from to ] [ -S stream [ -P parent ] files... ]
+--shelf (-s): specifies the shelved changelist number to use.
+--stream (-S): specifies the stream to be used.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--parent (-P): specifies the stream to be used as the parent.
+--force (-f): overrides the normal safety checks.
+--change (-c): specifies the changelist to use for the command.
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--branch (-b): specifies the branch name to use.
+Usage: unshelve -s changelist# [ -f -n ] [-c changelist#] [-b branch|-S stream [-P parent]] [file ...]
+--max (-m): specifies the maximum number of objects.
+--added (-a): display content of added files.
+--original (-O): specifies the original change number of a renumbered change.
+--diff-flags (-d): specifies flags for diff behavior.
+--shelved (-S): specifies to access shelved files.
+--force (-f): overrides the normal safety checks.
+--short (-s): displays a brief version of the results.
+Usage: describe [-d<flags> -a -m max -s -S -f -O -I] changelist# ...
+--convert-p4admin-comments: When used with -o option converts P4Admin style comments into new ## native spec comments.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+Usage: protect [ -i | -o ]
+--serverid (-P): specifies to use filtering specifications of this server.
+--new-user (-U): specifies the new user of an empty pending change.
+--original (-O): specifies the original change number of a renumbered change.
+--update (-u): allows the owner of a submitted change to update it.
+--type (-t): specify the type of this change (public or restricted).
+--status (-s): specifies the change status.
+--force (-f): overrides the normal safety checks.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: change [ -d -i -o -s -t<type> -U<user>] [ -f | -u ] [ [ -O | -I ] changelist# ]
+Perforce client info:
+	You have no aliases defined.
+--no-case-expression (-E): specifies the case-insensitive expression to filter the results.
+--expression (-e): specifies the expression to filter the results.
+--depot-type (-t): specifies the type of depot
+Usage: depots [ -t type ] [ [-e|-E] nameFilter ]
+--modtime (-m): specifies the file modification time should be checked.
+--local (-l): specifies local syntax for filenames.
+--delete (-d): specifies files should be opened for delete.
+--add (-a): specifies files should be opened for add.
+--edit (-e): specifies files should be opened for edit.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--no-ignore (-I): specifies that the command should ignore the P4IGNORE settings.
+Usage: clean [ -a -d -e -I -l -n ] [ files... ]
+--client (-C): limit the results to this client workspace.
+--owner (-O): limit output to repos owned by specified user or group.
+--user (-u): limit output to repos readable by specified user or group.
+--from: specifies the old value.
+--no-case-expression (-E): specifies the case-insensitive expression to filter the results.
+--expression (-e): specifies the expression to filter the results.
+--max (-m): specifies the maximum number of objects.
+Usage: repos [-e|-E filter -m max -u user -O owner --from=origin]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--quiet (-q): suppresses normal information output.
+--binary-as-text (-t): specifies that binary files are to be processed.
+--output-flags (-O): specifies codes controlling the command output.
+--unified (-u): specifies to display the diff in unified format.
+--parent (-P): specifies the stream to be used as the parent.
+--stream (-S): specifies the stream to be used.
+--diff-flags (-d): specifies flags for diff behavior.
+--branch (-b): specifies the branch name to use.
+Usage: diff2 [ -d<flags> -Od -q -t -u ] [ -b branchName ] [ -S stream ] [ -P parent ] file file2
+--ignore-have: specifies that the publish option (-p) ignore any have records.
+--estimates (-N): specifies to display estimates about the work required.
+--parallel=threads=N,batch=N,batchsize=N,min=N,minsize=N: specify file transfer parallelism.
+--use-list (-L): collects multiple file arguments into an in-memory list.
+--safe (-s): performs a safety check before sending the file.
+--publish (-p): populates the client workspace but does not update the server.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--quiet (-q): suppresses normal information output.
+--max (-m): specifies the maximum number of objects.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+Usage: sync [ -f -k -n -N -p -q -r -s ] [-m max] [files...]
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--erase (-w): removes the object from the client machine.
+--modtime (-m): specifies the file modification time should be checked.
+--local (-l): specifies local syntax for filenames.
+--delete (-d): specifies files should be opened for delete.
+--add (-a): specifies files should be opened for add.
+--edit (-e): specifies files should be opened for edit.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--no-ignore (-I): specifies that the command should ignore the P4IGNORE settings.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+--change (-c): specifies the changelist to use for the command.
+Usage: reconcile [ -c changelist# ] [ -a -e -d -k -l -f -I -m -n -w ] [files...]
+--source-file (-s): treat fromFile as the source and both sides of the branch view as the target.
+--stream (-S): specifies the stream to be used.
+--output (-o): specifies that the data should be written to standard output.
+--reverse (-r): specifies to reverse the direction of the branch view.
+--parent (-P): specifies the stream to be used as the parent.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--max (-m): specifies the maximum number of objects.
+--force (-f): overrides the normal safety checks.
+--description (-d): specifies the description of the change.
+--branch (-b): specifies the branch name to use.
+Usage: populate [ -d desc -f -m max -n -o -r -s from ] [ -b branch | -S stream [ -P parent ] | from to ]
+Usage: prune -d [ -y ] -S stream
+--me: Shorthand for -u $P4USER
+--show-time (-t): includes the time in the output.
+--no-case-expression (-E): specifies the case-insensitive expression to filter the results.
+--unload (-U): enables access to unloaded objects.
+--serverid (-s): specifies the serverid.
+--all (-a): specifies that the command should include all objects.
+--expression (-e): specifies the expression to filter the results.
+--user (-u): specifies the user name.
+--max (-m): specifies the maximum number of objects.
+Usage: labels [ -t ] [ -u user ] [ -U ] [ [-e|-E] nameFilter ] [ -m max ] [ -a | -s serverID ] [ file[revRange] ]
+Perforce client error:
+	--quiet (-q): suppresses normal information output.
+	--cmd-charset (-Q): specifies the client's command character set.
+	--charset (-C): specifies the client's character set.
+	--service (-S): specifies the value applies to the named service.
+	--system (-s): specifies the value should apply to all users on the system.
+	p4 -h for usage.
+--file-charset (-Q): specifies a character set override for this file.
+--filetype (-t): specifies the filetype to be used.
+--change (-c): specifies the changelist to use for the command.
+Usage: reopen [-c changelist#] [-t type] files...
+Perforce client error:
+	--cmd-charset (-Q): specifies the client's command character set.
+	--charset (-C): specifies the client's character set.
+	p4 -h for usage.
+--forcenoretransfer: skip file transfer if archive files are found (undoc and not recommended).
+--allow-empty: allows submitting empty repo commit.
+--parallel=threads=N,batch=N,min=N: specify file transfer parallelism.
+--noretransfer: override submit.noretransfer configurable behavior.
+--tamper-check (-t): specifies that file digests should be used to detect tampering.
+--status (-s): include the fix status for each job in the spec.
+--reopen (-r): specifies that the files should be reopened after submit.
+--submit-options (-f): specifies options for handling unchanged files.
+--shelf (-e): specifies the shelved changelist to submit.
+--description (-d): specifies the description of the change.
+--change (-c): specifies the changelist to use for the command.
+--input (-i): specifies that the data should be read from standard input.
+Usage: submit [ -i -s -r -f option --noretransfer option ] [ -c changelist# | -e shelvedChange# | -d description ] [file]
+--max-access (-m): displays a single word summary of the maximum access level.
+--host (-h): specifies the host name to use.
+--user (-u): specifies the user name.
+--group (-g): specifies the group name.
+--all (-a): specifies that the command should include all objects.
+Usage: protects [-s spec][ -a | -g group | -u user ] [ -h host ] [ -m ] [ file ... ]
+--fix-status (-s): specifies the status for this fix.
+--delete (-d): specifies that the object should be deleted.
+--change (-c): specifies the changelist to use for the command.
+Usage: fix [ -d ] [ -s status ] -c changelist# jobName ...
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--from: specifies the old value.
+--output-flags (-O): specifies codes controlling the command output.
+--parent (-P): specifies the stream to be used as the parent.
+--stream (-S): specifies the stream to be used.
+--source-file (-s): treat fromFile as the source and both sides of the branch view as the target.
+--bypass-flow (-F): forces the command to process against a stream's expected flow.
+--quiet (-q): suppresses normal information output.
+--virtual (-v): performs the action on the server without updating client data.
+--max (-m): specifies the maximum number of objects.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--change (-c): specifies the changelist to use for the command.
+--reverse (-r): specifies to reverse the direction of the branch view.
+--branch (-b): specifies the branch name to use.
+Usage: merge [ -c changelist# -F -m max -n -Ob -q -r -s from ] [ -b branch to... | -S stream [ -P parent | --from parent ] [ file... ] | from to ]
+--exists: Only output spec if it exists.
+--type (-T): specifies the type of client (writeable/readonly/graph).
+--serverid (-P): specifies to use filtering specifications of this server.
+--temporary (-x): specifies to create a temporary client.
+--template (-t): specifies the template for a client or label.
+--stream (-S): specifies the stream to be used.
+--switch (-s): specifies to switch this client to a different stream.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--force-flag (-F): optional force behavior when deleting clients.
+--force (-f): overrides the normal safety checks.
+--delete (-d): specifies that the object should be deleted.
+--change (-c): specifies the changelist to use for the command.
+Usage: client [ -d -f -Fs -i -o -s ] [ -T type ] [ -t template | -S stream ] [ -c change ] [ clientname ]
+--users (-u): show the user who modifed the line.
+--tab[=N] (-T): Align output to tab stops.
+--quiet (-q): suppresses normal information output.
+--follow-integ (-I): include all integrations into the file.
+--follow-branch (-i): include the revisions of the source file up to the branch point.
+--show-change (-c): show changelist numbers rather than revision numbers.
+--binary-as-text (-t): specifies that binary files are to be processed.
+--diff-flags (-d): specifies flags for diff behavior.
+--all (-a): specifies that the command should include all objects.
+Usage: annotate [ -aciIqtTu -d<flags> ] files...
+--counter (-t): specifies the counter name.
+--change (-c): specifies the changelist to use for the command.
+Usage: review [ -c start_changelist# ] [ -t counter_name ]
+--counter (-t): specifies the counter name.
+--sequence (-c): specifies the sequence value.
+Usage: logger [ -c sequence# ] [ -t counter_name ]
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--erase (-w): removes the object from the client machine.
+--modtime (-m): specifies the file modification time should be checked.
+--local (-l): specifies local syntax for filenames.
+--delete (-d): specifies files should be opened for delete.
+--add (-a): specifies files should be opened for add.
+--edit (-e): specifies files should be opened for edit.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--no-ignore (-I): specifies that the command should ignore the P4IGNORE settings.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+--change (-c): specifies the changelist to use for the command.
+Usage: reconcile [ -c changelist# ] [ -a -e -d -k -l -f -I -m -n -w ] [files...]
+--client (-C): specifies the client workspace name.
+--change (-c): specifies the changelist to use for the command.
+Usage: reviews [ -C client ] [ -c changelist# ] [ files... ]
+--client-type: specifies the type of client.
+--me: Shorthand for -u $P4USER
+--show-time (-t): includes the time in the output.
+--no-case-expression (-E): specifies the case-insensitive expression to filter the results.
+--stream (-S): specifies the stream to be used.
+--unload (-U): enables access to unloaded objects.
+--serverid (-s): specifies the serverid.
+--all (-a): specifies that the command should include all objects.
+--expression (-e): specifies the expression to filter the results.
+--user (-u): specifies the user name.
+--max (-m): specifies the maximum number of objects.
+Usage: clients [ -t ] [ -u user ] [ -U ] [ [-e|-E] query ] [ -m max ] [ -a | -s serverID ] [ -S stream ]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--sort-flags (-S): changes the order of output.
+--restrict-flags (-R): limits the output to specific files.
+--equal (-e): specifies the exact changelist.
+--attribute-pattern (-A): displays only attributes that match the pattern.
+--unload (-U): enables access to unloaded objects.
+--reverse (-r): specifies to reverse the direction of the branch view.
+--max (-m): specifies the maximum number of objects.
+--output-flags (-O): specifies codes controlling the command output.
+--change (-c): specifies the changelist to use for the command.
+--use-list (-L): collects multiple file arguments into an in-memory list.
+--tags (-T): specify which tags to include in the results.
+--filter (-F): specify filters which limit the results.
+Usage: fstat [ -F filter -T fields -m max -r ] [ -c | -e changelist# ] [ -Ox -Rx -Sx ] [-A pattern] [-U] file[rev]...
+--ignore-changeview: Ignore the limits imposed by the changview.
+--max (-m): specifies the maximum number of objects.
+--job (-j): specifies the job name.
+--inherited (-i): includes changes integrated into the files.
+--change (-c): specifies the changelist to use for the command.
+Usage: fixes [ -i -m max -c changelist# -j jobName ] [files...]
+--graph-only: skip any non-graph results.
+Usage: have [files...]
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--parent (-P): specifies the stream to be used as the parent.
+--stream (-S): specifies the stream to be used.
+--source-file (-s): treat fromFile as the source and both sides of the branch view as the target.
+--bypass-flow (-F): forces the command to process against a stream's expected flow.
+--quiet (-q): suppresses normal information output.
+--virtual (-v): performs the action on the server without updating client data.
+--max (-m): specifies the maximum number of objects.
+--exists (-e): includes only files which are not deleted.
+--force (-f): overrides the normal safety checks.
+--from: specifies the old value.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--change (-c): specifies the changelist to use for the command.
+--reverse (-r): specifies to reverse the direction of the branch view.
+--branch (-b): specifies the branch name to use.
+Usage: copy [ -c changelist# -f -F -m max -n -q -r -s from -v ] [ -b branch to... | -S stream [ -P parent ] [ file... ] | from to ]
+--output-base (-o): specifies to display the revision used as the base.
+Usage: resolved [ -o ] [files...]
+--unload (-U): enables access to unloaded objects.
+--quiet (-q): suppresses normal information output.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--global (-g): enables modifying a global label from an Edge Server.
+--label (-l): specifies the name of the label.
+--delete (-d): specifies that the object should be deleted.
+--append (-a): specifies that information is to be appended.
+Usage: labelsync [-a -d -g -n -q] -l label [files...]
+--verbose (-v): includes additional information in the output.
+--increment (-i): specifies that the value is to be incremented by 1.
+--to: specifies the new value.
+--from: specifies the old value.
+--force (-f): overrides the normal safety checks.
+--delete (-d): specifies that the object should be deleted.
+Usage: key [ -d | -i | -m ] [ -v ] [ --from=old --to=new ] key_name [ value ] [ ... ]
+Usage: passwd [ -O oldPasswd -P newPasswd ] [ username ]
+--global (-g): reports or changes global locks from Edge Server
+--change (-c): specifies the changelist to use for the command.
+Usage: lock [-c changelist# -g] [files...]
+--stream (-S): specifies the stream to be used.
+--shelve-options (-a): specifies options for handling unchanged files.
+--parallel=threads=N,batch=N,batchsize=N,min=N,minsize=N: specify file transfer parallelism.
+--promote (-p): specifies to promote the shelf to the Commit Server.
+--replace (-r): specifies to replace all shelved files in the changelist.
+--input (-i): specifies that the data should be read from standard input.
+--force (-f): overrides the normal safety checks.
+--delete (-d): specifies that the object should be deleted.
+--change (-c): specifies the changelist to use for the command.
+Usage: shelve [ -a option -p ] [ -i [ -f | -r ] | [ -a option -p ] -r -c changelist | -c changelist [ -d ] [ -f ] [ file ... ] ] [ files ]
+--ignore-case (-i): causes the pattern-matching to be case-insensitive.
+--context (-C): specifies the number of lines of context.
+--before-context (-B): specifies the number of lines before the match.
+--after-context (-A): specifies the number of lines after the match.
+--expression (-e): specifies the expression to filter the results.
+--regexp (-e): specifies the regular expression
+--perl-regexp (-P): specifies a Perl regular expression
+--extended-regexp (-E): specifies an extended regular expression.
+--basic-regexp (-G): specifies a basic regular expression.
+--fixed-strings (-F): specifies a fixed string.
+--no-messages (-s): specifies no line-too-long messages.
+--files-without-match (-L): only print files containing no match.
+--files-with-matches (-l): only print files containing matches.
+--invert-match (-v): select non-matching lines.
+--line-number (-n): print line number with output lines.
+--binary-as-text (-t): specifies that binary files are to be processed.
+--all (-a): specifies that the command should include all objects.
+Usage: grep [ -a -i -n -A after -B before -C context -t -s ] [ -v | -l | -L ] [ -F | -G ] -e pattern files...
+--ignore-changeview: Ignore the limits imposed by the changview.
+--ignore-case (-i): causes the pattern-matching to be case-insensitive.
+--unload (-U): enables access to unloaded objects.
+--max (-m): specifies the maximum number of objects.
+--exists (-e): includes only files which are not deleted.
+--archive (-A): enables access to the archive depot
+--all (-a): specifies that the command should include all objects.
+Usage: files [-a -A -e -i -m max] [-U] files...
+--propagating (-p): specifies the attribute is propagating.
+--value (-v): specifies the object value.
+--name (-n): specifies the object name.
+--input (-i): specifies that the data should be read from standard input.
+--force (-f): overrides the normal safety checks.
+--encoded (-e): specifies that the value is to be encoded.
+Usage: attribute [-e -f -p] -n name [-v value] files...
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--change (-c): specifies the changelist to use for the command.
+Usage: undo [ -n ] [ -c change ] file[revRange]
+Usage: where [files...]
+--expression (-e): specifies the expression to filter the results.
+--max (-m): specifies the maximum number of objects.
+Usage: counters [ -e nameFilter -m max ]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--ignore-case (-i): causes the pattern-matching to be case-insensitive.
+--omit-lazy (-z): omits lazy copies from the results.
+--unload (-U): enables access to unloaded objects.
+--shelved (-S): specifies to access shelved files.
+--summary (-s): displays summary information.
+--max (-m): specifies the maximum number of objects.
+--human-1000 (-H): displays human-friendly output using units of 1000.
+--human (-h): displays output using human-friendly abbreviations.
+--blocksize (-b): specifies the blocksize to be used for calculations.
+--archive (-A): enables access to the archive depot
+--all (-a): specifies that the command should include all objects.
+Usage: sizes [ -a ] [ -s | -z ] [ -b blocksize ] [ -h | -H ] [ -m max ] [ -S | -U | -A ] files...
+--replacement (-r): specifies that a replacement is affected.
+--force (-f): overrides the normal safety checks.
+--no (-n): causes prompts to be automatically refused.
+--yes (-y): causes prompts to be automatically accepted.
+--status (-l): specifies that status information should be displayed
+--delete (-d): specifies that the object should be deleted.
+--value (-i): specifies the value.
+p4 [ -p port ] trust [ -y -n -d -l -f -r -i <fingerprint> ]
+	Only one of -y -n -d -l -i is allowed.
+	Use p4 trust -h for detailed help.
+
+--host (-h): specifies the host name to use.
+--all (-a): specifies that the command should include all objects.
+Usage: logout [ -a | -h host ] [ username ]
+--expression (-e): specifies the expression to filter the results.
+--max (-m): specifies the maximum number of objects.
+Usage: keys [ -e nameFilter -m max ]
+--client-type: specifies the type of client.
+--me: Shorthand for -u $P4USER
+--show-time (-t): includes the time in the output.
+--no-case-expression (-E): specifies the case-insensitive expression to filter the results.
+--stream (-S): specifies the stream to be used.
+--unload (-U): enables access to unloaded objects.
+--serverid (-s): specifies the serverid.
+--all (-a): specifies that the command should include all objects.
+--expression (-e): specifies the expression to filter the results.
+--user (-u): specifies the user name.
+--max (-m): specifies the maximum number of objects.
+Usage: clients [ -t ] [ -u user ] [ -U ] [ [-e|-E] query ] [ -m max ] [ -a | -s serverID ] [ -S stream ]
+--global (-g): reports or changes global locks from Edge Server
+--exclusive (-x): indicates that the command should process files of type +l.
+--user (-u): specifies the user name.
+--short (-s): displays a brief version of the results.
+--max (-m): specifies the maximum number of objects.
+--client (-C): specifies the client workspace name.
+--change (-c): specifies the changelist to use for the command.
+--all (-a): specifies that the command should include all objects.
+Usage: opened [ -a -m max ] [ -c changelist# -C client -u user -s -g | -x ] [ files... ]
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--summary (-s): displays summary information.
+--modtime (-m): specifies the file modification time should be checked.
+--delete (-d): specifies files should be opened for delete.
+--add (-a): specifies files should be opened for add.
+--edit (-e): specifies files should be opened for edit.
+--no-ignore (-I): specifies that the command should ignore the P4IGNORE settings.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+--change (-c): specifies the changelist to use for the command.
+Usage: status [ -c changelist# ] [ -A | [ -a -e -d ] | [ -s ] ] [ -f -m -I ] [files...]
+--reverse (-r): specifies to reverse the direction of the branch view.
+--branch (-b): specifies the branch name to use.
+Usage: integrated [ -r ] [ -b branch ] [ files... ]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--rebuild (-R): rebuild the database.
+--reverse (-r): specifies to reverse the direction of the branch view.
+--max (-m): specifies the maximum number of objects.
+--long (-l): displays a complete version of the results.
+--inherited (-i): includes changes integrated into the files.
+--expression (-e): specifies the expression to filter the results.
+Usage: jobs [-e query -i -l -m count -r] [files...]
+--exists: Only output spec if it exists.
+--depot-type (-t): specifies the type of depot
+--force (-f): overrides the normal safety checks.
+--output (-o): specifies that the data should be written to standard output.
+--input (-i): specifies that the data should be read from standard input.
+--delete (-d): specifies that the object should be deleted.
+Usage: depot [ -i -o -t type ] [ -d [ -f ] ] depotname
+--exclusive (-x): indicates that the command should process files of type +l.
+--shelf (-s): specifies the shelved changelist number to use.
+--change (-c): specifies the changelist to use for the command.
+--force (-f): overrides the normal safety checks.
+Usage: -c client unlock [-f] -r
+       or
+       unlock [ -f ] [-c | -s changelist# | -x ] [files...]
+--create (-c): Create a new stream and populate it with files from the current stream. (dvcs only)
+--movechanges (-r): Move open files to the stream you are switching to, instead of shelving and reverting them.
+--mainline (-m): Create this stream as an empty mainline (no parent).
+--list (-l): list all the streams available to your client.
+--parent (-P): specifies the stream to be used as the parent.
+--verbose (-v): includes additional information in the output.
+Usage: switch [ -l -L -r -v ] stream
+--max (-m): specifies the maximum number of objects.
+--long (-l): displays a complete version of the results.
+--replica-only (-r): include user information from the replica server only.
+--central-only (-c): include user information from the central server only.
+--all (-a): specifies that the command should include all objects.
+Usage: users [ -l -a -r -c ] [ -m max ] [ user ... ]
+--promote (-p): specifies to promote the shelf to the Commit Server.
+--force (-f): overrides the normal safety checks.
+--change (-c): specifies the changelist to use for the command.
+Usage: reshelve -s changelist [ -p -f ] [ -c changelist ] [ file ... ]
+--unload (-U): enables access to unloaded objects.
+--quiet (-q): suppresses normal information output.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--global (-g): enables modifying a global label from an Edge Server.
+--label (-l): specifies the name of the label.
+--delete (-d): specifies that the object should be deleted.
+--append (-a): specifies that information is to be appended.
+Usage: tag [-d -g -n -U] -l label files...
+--virtual (-v): performs the action on the server without updating client data.
+--remote: Specifies the remote spec to be used.
+--filetype (-t): specifies the filetype to be used.
+--file-charset (-Q): specifies a character set override for this file.
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--no-ignore (-I): specifies that the command should ignore the P4IGNORE settings.
+--force (-f): overrides the normal safety checks.
+--downgrade (-d): indicates that the operation should be downgraded.
+--change (-c): specifies the changelist to use for the command.
+Usage: add/edit/delete [-c changelist#] [ -d -f -I -k -n -v ] [-t type] [--remote=rmt] files...
+Usage: login2 [ -s [ -a ] | -p -R -m method -S state ] [ -h host ] [ username ]
+--filetype (-t): specifies the filetype to be used.
+--rename (-r): rename existing files without changing content.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--force (-f): overrides the normal safety checks.
+--change (-c): specifies the changelist to use for the command.
+Usage: move [-c changelist#] [ -f ] [ -k ] [-t type] [ -r ] from to
+--verbose (-v): includes additional information in the output.
+--increment (-i): specifies that the value is to be incremented by 1.
+--to: specifies the new value.
+--from: specifies the old value.
+--force (-f): overrides the normal safety checks.
+--delete (-d): specifies that the object should be deleted.
+Usage: counter [ -f ] [ -d | -i | -m ] [ -v ] [ --from=old --to=new ] counter_name [ value ] [ ... ]
+--ignore-changeview: Ignore the limits imposed by the changview.
+--ignore-case (-i): causes the pattern-matching to be case-insensitive.
+--client (-C): limit the results to this client workspace.
+--stream (-S): specifies the stream to be used.
+Usage: dirs [-C -D -H] [-S stream] [-i] dirs...
+--virtual (-v): performs the action on the server without updating client data.
+--remote: Specifies the remote spec to be used.
+--filetype (-t): specifies the filetype to be used.
+--file-charset (-Q): specifies a character set override for this file.
+--bypass-exclusive-lock: allow command on (+l) filetype even if already exclusively opened.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+--keep-client (-k): leaves the client's copy of the files untouched.
+--no-ignore (-I): specifies that the command should ignore the P4IGNORE settings.
+--force (-f): overrides the normal safety checks.
+--downgrade (-d): indicates that the operation should be downgraded.
+--change (-c): specifies the changelist to use for the command.
+Usage: add/edit/delete [-c changelist#] [ -d -f -I -k -n -v ] [-t type] [--remote=rmt] files...
+--binary-as-text (-t): specifies that binary files are to be processed.
+--change (-c): specifies the changelist to use for the command.
+--output-base (-o): specifies to display the revision used as the base.
+--preview-noncontent (-N): previews the operation, including non-content.
+--verbose (-v): includes additional information in the output.
+--force (-f): overrides the normal safety checks.
+--accept-flags (-a): specifies the level of automatic resolves accepted.
+--resolve-flags (-A): controls which types of resolves are performed.
+--diff-flags (-d): specifies flags for diff behavior.
+--preview (-n): specifies that the command should display a preview of the results, but not execute them.
+Usage: resolve [ -af -am -as -at -ay -A<flags> -c changelist# -d<flags> -f -n -N -o -t -v ] [ files... ]

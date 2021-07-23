@@ -1,7 +1,8 @@
 #use Grammar::Tracer;
 grammar Cmd-Des {
-  token TOP ($*pre, $*ex, $*suf) {
+  token TOP {
     <inf>+ <cd>+ <inf>+ \n
+    { make %($/<cd>.map: { .made }) }
   }
   token cd { <id>**2 <cmd> \s+ <des> $$ { make $/<cmd>.made => $/<des>.made } }
   token inf { <id> <des> [\s**2 <des>]? }
@@ -10,23 +11,29 @@ grammar Cmd-Des {
   token ex  { 'p4 help' <.ws> }
   token id { \n* \s**4 }
 }
+=begin pod
 class P4-actions {
-  method TOP ($/) { make %($/<cd>.map: { .made }) }
+  method TOP ($/) 
 }
+, actions => P4-actions.new
+, actions => P4-actions.new
+=end pod
 #my $tem = P4C-help.parsefile('p4-help.txt');
 #my $__fish = 1 ?? '__fish_contains_opt' !! '__fish_seen_subcommand_from';
 # Parsing and creating fish completion's
 
 my $p4fc = open 'p4-completion.fish', :w;
-with Cmd-Des.parsefile('p4-help-cmds.txt', :args((1,0,6)), actions => P4-actions.new).made {
-  #.keys.elems.say;
+with Cmd-Des.parsefile('p4-help-cmds.txt').made {
+  # `p4 help commands`
+  .keys.sort.say;
   $p4fc.say: $('set -l p4_client_commands ' ~ .keys.join(' ') ~ "\n").subst(' help','');
   $p4fc.say: 'complete -f -c p4 -n "not __fish_seen_subcommand_from help" -a help -d "Print the requested help message"';
   for .kv -> $c, $d {
     $p4fc.say: 'complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a ' ~ "$c -d \"$d\"" unless $c eq 'help';
   }
 }
-with Cmd-Des.parsefile('p4-help.txt', :args((3,1,3)), actions => P4-actions.new).made {
+with Cmd-Des.parsefile('p4-help.txt').made {
+  # `p4 help`
   #.keys.elems.say;
   $p4fc.say: 'set -l p4c_help ' ~ .keys.join(' ') ~ "\n";
   for .kv -> $c, $d {
