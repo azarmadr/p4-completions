@@ -6,9 +6,8 @@ grammar Cmd-Des {
   }
   token cd { <id>**2 <cmd> \s+ <des> $$ { make $/<cmd>.made => $/<des>.made } }
   token inf { <id> <des> [\s**2 <des>]? }
-  token des {  \S+ [ \s \S+ ]* { make $/.Str } }
-  token cmd { <.ex>? \w+ { make ~$/.words[*-1] } }
-  token ex  { 'p4 help' <.ws> }
+  token des {  \S+ [ \s \S+ ]* { make ~$/ } }
+  token cmd { 'p4 help '? (\w+) { make ~$/[0] } }
   token id { \n* \s**4 }
 }
 # Parsing and creating fish completion's
@@ -17,11 +16,12 @@ my $p4fc = open 'p4-completion.fish', :w;
 with Cmd-Des.parsefile('p4-help-cmds.txt').made {
   # `p4 help commands`
   .keys.sort.say;
-  $p4fc.say: 'set -l p4_client_commands ' ~ .keys.join(' ') ~ "\n";
-  $p4fc.say: 'complete -c p4 -n "__fish_use_subcommand" -f -a help -d "Print the requested help message"';
-  $p4fc.say: 'complete -c p4 -n "not __fish_contains_opt help; and __fish_seen_subcommand_from $p4_client_commands" -l explain -d "display additional information about the flags"';
+  $p4fc.say: 'set -l p4_client_commands ' ~ .keys.sort.join(' ') ~ '
+    complete -c p4 -n "__fish_use_subcommand" -f -a help -d "Print the requested help message"
+    complete -c p4 -n "__fish_seen_subcommand_from help" -a "$p4_client_commands"
+    complete -c p4 -n "not __fish_contains_opt help; and __fish_seen_subcommand_from $p4_client_commands" -l explain -d "display additional information about the flags"'.indent(*);
   for .kv -> $c, $d {
-    $p4fc.say: 'complete -f -c p4 -n "__fish_seen_subcommand_from help; or not __fish_seen_subcommand_from $p4_client_commands" -a ' ~ "$c -d \"$d\"";
+    $p4fc.say: 'complete -f -c p4 -n "__fish_use_subcommand" -a ' ~ "$c -d \"$d\"";
   }
 }
 with Cmd-Des.parsefile('p4-help.txt').made {
